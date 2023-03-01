@@ -22,6 +22,8 @@ function restoreForm() {
         const userData = JSON.parse(item);
         email.value = userData.email === undefined ? "" : userData.email;
         message.value = userData.message === undefined ? "" : userData.message;
+        formData.email = email.value;
+        formData.message = message.value;
     }
 }
 restoreForm();
